@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".dashboard">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/montserrat"
+            android:text="Dashboard"
+            android:padding="1dp"
+            android:layout_margin="20dp"
+            android:textSize="30dp"></TextView>
+
+
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/montserrat"
+            android:padding="8dp"
+            android:id="@+id/user_logout"
+            android:layout_marginTop="15dp"
+            android:layout_marginLeft="60dp"
+            android:text="Logout">
+
+        </Button>
+
+    </LinearLayout>
+
+    <View
+        android:id="@+id/divider"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="?android:attr/listDivider" />
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_margin="10dp"
+        android:layout_height="288dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:fontFamily="@font/montserrat"
+            android:text="Add a new car"
+            android:textSize="18dp"></TextView>
+
+        <Spinner
+            android:id="@+id/spinner1"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+             android:layout_marginTop="80dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            style="@android:style/Widget.Holo.Light.Spinner"
+            android:elevation="50dp">
+
+        </Spinner>
+
+        <Spinner
+            android:id="@+id/spinner2"
+            android:layout_width="match_parent"
+            android:layout_marginTop="150dp"
+            android:layout_marginLeft="20dp"
+            style="@android:style/Widget.Holo.Light.Spinner"
+            android:layout_marginRight="20dp"
+            android:layout_height="52dp"
+            android:elevation="50dp">
+
+        </Spinner>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:id="@+id/addCar_Button"
+            android:layout_height="wrap_content"
+           android:layout_marginLeft="130dp"
+            android:layout_marginTop="220dp"
+            android:fontFamily="@font/montserrat"
+            android:text="Add car"></Button>
+
+    </androidx.cardview.widget.CardView>
+
+
+    <View
+        android:id="@+id/divider2"
+        android:layout_width="match_parent"
+        android:layout_marginTop="10dp"
+        android:layout_height="1dp"
+        android:background="?android:attr/listDivider" />
+
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:id="@+id/addSomeNewCars"
+                android:layout_height="wrap_content"
+                android:textSize="15dp"
+                android:layout_marginTop="90dp"
+                android:fontFamily="@font/montserrat"
+                android:layout_marginLeft="40dp"
+                android:text="Your Garage is Empty Add some New cars!"></TextView>
+
+            <ImageView
+                android:layout_width="120dp"
+                android:id="@+id/addSomeNewCarsLogo"
+                android:src="@drawable/img"
+                android:layout_gravity="center"
+                android:padding="8dp"
+                android:layout_height="120dp">
+
+            </ImageView>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:layout_width="match_parent"
+                android:id="@+id/recyclerview"
+                android:layout_height="wrap_content">
+
+            </androidx.recyclerview.widget.RecyclerView>
+
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+
+
+</LinearLayout>
